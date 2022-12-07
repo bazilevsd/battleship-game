@@ -1,18 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script defer src="script.js"></script>
     <title>Document</title>
-</head>
-<body>
-    <div class="player1">
-        <tr class="player1tr"></tr>
+  </head>
+  <body>
+    <button class="startBattle" disabled>Start New Battle</button>
+    <button class="startNewGame">Start New Game</button>
+    <div class="score">
+      <div class="player1score">
+        <h2>Player 1 Score:</h2>
+        <h2 class="score1"></h2>
+      </div>
+      <div class="player2score">
+        <h2>Player 2 Score:</h2>
+        <h2 class="score2"></h2>
+      </div>
     </div>
-    <div class="player2"></div>
-    
-</body>
+    <div class="main">
+      <!-- Modal code -->
+      <div class="modal" id="modal">
+        <div id="modal-textbox">
+          <h2>How to play the game.</h2>
+          <p>
+            There are two players. Each player positions its ships secretly from
+            the opponent. After the ships have been positioned, the game
+            proceeds in a series of rounds. turn changes when player misses the
+            ship. In each round, each player takes a turn to click on a target
+            square in the opponent's grid which is to be shot at. If it is a
+            "hit", the square turns red. If all of a player's ships have been
+            sunk, the game is over and their opponent wins. If all ships of both
+            players are sunk by the end of the round, the game is a draw.
+          </p>
+          <div id="modal-footer">
+            <button class="modal-buttons" id="next" href="#">Next</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="player1setup">
+        <h2>Player 1</h2>
+        <input class="player1input" type="text" />
+        <button class="player1button">Enter name</button>
+        <div id="modal-footer">
+          <button class="modal-buttons" id="next1" href="#">Next</button>
+        </div>
+      </div>
+      <div class="modal" id="player2setup">
+        <h2>Player 2</h2>
+        <input class="player2input" type="text" />
+        <button class="player2button">Enter name</button>
+        <div id="modal-footer">
+          <button class="modal-buttons" id="next2" href="#">Next</button>
+        </div>
+      </div>
+
+      <div class="modal" id="shipSeUpPlayer1">
+        <div id="player1">
+          <h2>Player 1:</h2>
+        </div>
+        <div id="modal-footer">
+          <button class="modal-buttons" id="next3" href="#">Next</button>
+        </div>
+      </div>
+      <div class="modal" id="shipSetUpPlayer2">
+        <div id="player2">
+          <h2>Player 2:</h2>
+        </div>
+        <div id="modal-footer">
+          <button class="modal-buttons" id="next4" href="#">Next</button>
+        </div>
+      </div>
+      <!-- <div class="modal" id="player1gameMode">
+        <div id="player1"></div>
+      <div id="player2"></div>
+      </div>
+
+      <div class="modal" id="player2gameMode">
+        <div id="player2"></div>
+      <div id="player1"></div>
+      </div> -->
+    </div>
+  </body>
 </html>
